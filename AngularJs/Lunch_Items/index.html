@@ -8,6 +8,24 @@
     <script src="App.js"></script>
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
+      
+      .green {
+      color: green;
+      border-style: solid;
+      border-color: #00ff00;
+      }
+      .red {
+      color: red;
+      border-style: solid;
+      border-color: #ff0000;
+      }
+      .def {
+        color: white;
+      border-style: solid;
+      border-color: white;
+
+      }
+      
     </style>
   </head>
 <body>
@@ -22,7 +40,7 @@
          <div class="form-group">
              <button class="btn btn-default" ng-click = "splitItem()">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+<div class="form-group message" ng-class="{red:message=='Please enter data first',green:message=='Enjoy!' || 'Too much!',def:message==''}">
            {{message}}
          </div>
    </div>
